@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:new_project/screens/adminpanel/admin_dash.dart';
+import 'package:new_project/constans/colors.dart';
+import 'package:new_project/constans/strings.dart';
 
 class custom_appbar extends StatefulWidget {
   Function drawerclicked;
@@ -14,8 +15,8 @@ class _custom_appbarState extends State<custom_appbar> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment(0, 0.5),
-      height: HomePage.context_height / 10,
-      width: HomePage.context_width,
+      height: context_height / 10,
+      width: context_width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -26,7 +27,6 @@ class _custom_appbarState extends State<custom_appbar> {
             child: IconButton(
                 onPressed: () {
                   widget.drawerclicked();
-                  // () matra yo call vayonitw this is calleed
                 },
                 icon: Icon(
                   Icons.dehaze,
@@ -57,7 +57,7 @@ class _custom_appbarState extends State<custom_appbar> {
       ),
       decoration: BoxDecoration(
           boxShadow: [BoxShadow(color: Colors.black)],
-          gradient: LinearGradient(colors: HomePage.custom_color)),
+          gradient: LinearGradient(colors: custom_color)),
     );
   }
 }
